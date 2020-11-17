@@ -2,9 +2,10 @@
 <nav>
     <ul>
         {% if request.user.is_authenticated %}
-            <li><a href="{% url 'logout' %}">Salir</a></li>
+            <li><a href="{% url 'Logout' %}">Salir</a></li>
         {% else %}
-            <li><a href="{% url 'login' %}">Acceder</a></li>
+            <li><a href="{% url 'Sigin' %}">Registrarse</a></li>
+            <li><a href="{% url 'Login' %}">Acceder</a></li>
         {% endif %}
     </ul>
 </nav>
@@ -13,4 +14,4 @@
 
 {% block content %}{% endblock  %}
 
-<footer>Copyright <a href="tonyluque.github.io">Tony</a></footer>
+<footer>Copyright <a target="_blank" href="http://tonyluque.github.io">Tony</a></footer>
