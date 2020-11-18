@@ -2,6 +2,7 @@
 <nav>
     <ul>
         {% if request.user.is_authenticated %}
+            <li><a href="#">{{ request.user }}</a></li>
             <li><a href="{% url 'logout' %}">Salir</a></li>
         {% else %}
             <li><a href="{% url 'signup' %}">Registrarse</a></li>

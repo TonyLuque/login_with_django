@@ -125,5 +125,5 @@ STATIC_URL = '/static/'
 
 
 # Auth redirects
-# LOGIN_REDIRECT_URL = 'URL example pages:pages'
+LOGIN_REDIRECT_URL = 'home' # Es para cuando no haga una url accounts/profile example pages:pages
 LOGOUT_REDIRECT_URL = 'home'

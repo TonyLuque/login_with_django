@@ -5,6 +5,9 @@
 
 
 {% block content %}
+{% if request.user.is_authenticated %}
+    <h1>Hola <i>{{ request.user }}</i> !Bienvenido¡ a esta página de prueba de login</h1>
+{% endif %}
     <h1>{{title}}</h1>
     <p>CBV, autenticacion, registros y mas</p>
 {% endblock  %}
