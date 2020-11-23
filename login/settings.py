@@ -125,5 +125,13 @@ STATIC_URL = '/static/'
 
 
 # Auth redirects
-LOGIN_REDIRECT_URL = 'home' # Es para cuando no haga una url accounts/profile example pages:pages
+LOGIN_REDIRECT_URL = 'home' # Es para cuando no exista una url accounts/profile example pages:pages
 LOGOUT_REDIRECT_URL = 'home'
+
+# Email
+if DEBUG:
+    EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+    EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
+else:
+    # Aqui hay que configurar un email real para producción
+    pass
